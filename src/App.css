@@ -1,0 +1,376 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 10px 0; /* Padding around the links */
+  border-bottom: 1px solid #dee2e6; /* Subtle bottom border */
+}
+
+.nav button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav button:hover {
+  background-color: #45a049;
+}
+
+.gradient {
+  height: 400px; /* Set the height for the gradient container */
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); /* Initial gradient colors */
+  background-size: 800% 800%; /* Scale up background size for smooth animation */
+  animation: gradientAnimation 15s ease infinite; /* Apply animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient::before {
+  content: "Welcome to the Home Page. Please log in to access the Admin Page.";
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes for color-changing gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.adminPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 10px 20px; /* Some padding */
+  border-bottom: 1px solid #dee2e6; /* Subtle bottom border */
+}
+
+.add, .add2, .add3 {
+  margin: 0 10px; /* Space between elements */
+}
+
+.add {
+  font-weight: bold; /* Make the Admin Panel text bold */
+  font-size: 1.2em; /* Slightly larger font size */
+}
+
+.userViewContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.notification {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #fdd835;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userback {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.userback:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 0;
+}
+
+.tenderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tenderTable th,
+.tenderTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.tenderTable th {
+  background-color: #f2f2f2;
+}
+
+.tenderTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tenderTable tr:hover {
+  background-color: #f1f1f1;
+}
+.tenderButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tenderButton:hover {
+  background-color: #45a049;
+}
+.userViewButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.userViewButton:hover {
+  background-color: #45a049;
+}
+
+.tenderForm {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.tenderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tenderTable th,
+.tenderTable td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tenderTable td {
+  border-bottom: 1px solid #ddd;
+}
+
+.tenderTable td:last-child {
+  border-bottom: none;
+}
+
+/* Label styling */
+.labelTitle {
+  margin: 0;
+}
+
+/* Input and textarea styling */
+.tenderInput,
+.tenderTextarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.tenderTextarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Button styling */
+.tenderButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tenderButton:hover {
+  background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.bidsManagementContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.headerTitle {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Table styling */
+.bidsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bidsTable th,
+.bidsTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.bidsTable th {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+.bidsTable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.quotationFormContainer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.quotationFormContainer h3 {
+  margin-top: 0;
+}
+
+.quotationFormContainer input[type="text"],
+.quotationFormContainer textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.quotationFormContainer button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.quotationFormContainer button:hover {
+  background-color: #45a049;
+}
+
+
+.tenderTableList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tenderTableList th,
+.tenderTableList td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tenderTableList th {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+.tenderTableList tr:nth-child(even) {
+  background: #f9f9f9;
+}
